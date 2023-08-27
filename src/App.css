@@ -32,7 +32,7 @@
 }
 
 .flip-card-front {
-	background-color: #bbb;
+	background-image: url('./assets/card.svg');
 	color: black;
 }
 

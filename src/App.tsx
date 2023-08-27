@@ -1,4 +1,5 @@
 import './App.css';
+import Background from './assets/card.svg';
 
 function App() {
 	return (
@@ -7,14 +8,10 @@ function App() {
 				{Array(12)
 					.fill(0)
 					.map(() => (
-						<div className="flip-card">
+						<div className="flip-card rounded-lg overflow-hidden">
 							<div className="flip-card-inner">
-								<div className="flip-card-front"></div>
-								<div
-									// className={`w-full h-[200px] transform duration-300  hover:rotate-180 shadow-lg bg-[#DFDBE5] rounded-lg`}
-									className="flip-card-back">
-									asd
-								</div>
+								<div className="flip-card-front" style={{ background: Background }}></div>
+								<div className="flip-card-back">asd</div>
 							</div>
 						</div>
 					))}
