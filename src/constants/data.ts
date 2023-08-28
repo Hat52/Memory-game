@@ -1,52 +1,59 @@
-import scobyDoo from '../assets/scooby-doo.svg';
+import scobyDoo from '../assets/scoobyDoo.svg';
 
-export const gameData = [
+type TGameData = {
+	url: any;
+	name: string;
+	fliped?: boolean;
+	matched?: boolean;
+};
+
+export const gameData: TGameData[] = [
 	{
 		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	},
 	{
-		url: './assets/scooby-doo.svg',
+		url: scobyDoo,
 		name: ''
 	}
 ];
