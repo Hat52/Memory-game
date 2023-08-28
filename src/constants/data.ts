@@ -1,4 +1,9 @@
 import scobyDoo from '../assets/scoobyDoo.svg';
+import JJK from '../assets/jjk.jpg';
+import itachi from '../assets/itachi.jpg';
+import inazuma from '../assets/inazuma.jpg';
+import dz from '../assets/dz.jpg';
+import onePiece from '../assets/onepiece.jpg';
 
 type TGameData = {
 	url: any;
@@ -10,50 +15,50 @@ type TGameData = {
 export const gameData: TGameData[] = [
 	{
 		url: scobyDoo,
-		name: ''
+		name: 'scobby-do'
+	},
+	{
+		url: JJK,
+		name: 'jjk'
+	},
+	{
+		url: JJK,
+		name: 'jjk'
 	},
 	{
 		url: scobyDoo,
-		name: ''
+		name: 'scobby-do'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: itachi,
+		name: 'itachi'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: itachi,
+		name: 'itachi'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: inazuma,
+		name: 'inazuma'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: inazuma,
+		name: 'inazuma'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: dz,
+		name: 'dz'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: dz,
+		name: 'dz'
 	},
 	{
-		url: scobyDoo,
-		name: ''
+		url: onePiece,
+		name: 'onePiece'
 	},
 	{
-		url: scobyDoo,
-		name: ''
-	},
-	{
-		url: scobyDoo,
-		name: ''
-	},
-	{
-		url: scobyDoo,
-		name: ''
+		url: onePiece,
+		name: 'onePiece'
 	}
 ];

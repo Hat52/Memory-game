@@ -2,21 +2,18 @@ import { useState } from 'react';
 import './App.css';
 import { gameData } from './constants/data';
 
-type TCurrentFlip = {
-	[key: number]: boolean;
-};
-
 function App() {
-	gameData[0].fliped = true;
-	gameData[5].matched = true;
-
-	const [currentFlip, setCurrentFlip] = useState<TCurrentFlip>({});
+	const [currentFlips, setCurrentFlips] = useState<number[]>([]);
 
 	const handleClick = (index: number) => {
-		if (Object.keys(currentFlip).length >= 2) {
-			setCurrentFlip({ [index]: true });
+		if (Object.keys(currentFlips).length >= 2) {
+			if (gameData[currentFlips[0]].name === gameData[currentFlips[1]].name) {
+				gameData[currentFlips[0]].matched = true;
+				gameData[currentFlips[1]].matched = true;
+			}
+			setCurrentFlips([index]);
 		} else {
-			setCurrentFlip((prev) => ({ ...prev, [index]: true }));
+			setCurrentFlips((prev) => [...prev, index]);
 		}
 	};
 
@@ -27,14 +24,14 @@ function App() {
 					<div
 						onClick={() => handleClick(index)}
 						className={`flip-card rounded-lg overflow-hidden ${
-							Object.prototype.hasOwnProperty.call(currentFlip, index) || d.matched
+							currentFlips.find((flip: number) => flip === index) || d.matched
 								? 'rotate'
 								: ''
 						}`}>
 						<div className="flip-card-inner">
 							<div className="flip-card-front"></div>
 							<div className="flip-card-back">
-								<img src={d.url} alt={d.name} className="w-full h-full" />
+								<img src={d.url} alt={d.name} className="w-full h-full object-cover" />
 							</div>
 						</div>
 					</div>
