@@ -30,7 +30,7 @@ function App() {
 				{gameData.map((d: any, index: number) => (
 					<div
 						onClick={() => handleClick(index)}
-						className={`flip-card rounded-lg overflow-hidden ${
+						className={`flip-card 2xl:h-[250px] rounded-lg overflow-hidden ${
 							currentFlips.some((flip: number) => flip === index) || d.matched
 								? 'rotate'
 								: ''
