@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { gameData } from './constants/data';
 
@@ -17,6 +17,13 @@ function App() {
 		}
 	};
 
+	useEffect(() => {
+		for (let i = gameData.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[gameData[i], gameData[j]] = [gameData[j], gameData[i]];
+		}
+	}, []);
+
 	return (
 		<div className="md:px-60 px-5 py-10">
 			<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -24,7 +31,7 @@ function App() {
 					<div
 						onClick={() => handleClick(index)}
 						className={`flip-card rounded-lg overflow-hidden ${
-							currentFlips.find((flip: number) => flip === index) || d.matched
+							currentFlips.some((flip: number) => flip === index) || d.matched
 								? 'rotate'
 								: ''
 						}`}>
