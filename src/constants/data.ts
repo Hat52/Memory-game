@@ -14,51 +14,56 @@ type TGameData = {
 
 export const gameData: TGameData[] = [
 	{
+		url: onePiece,
+		name: 'onePiece'
+	},
+	{
 		url: sharigun,
 		name: 'sharigun.jpg'
+	},
+
+	{
+		url: JJK,
+		name: 'jjk'
+	},
+
+	{
+		url: itachi,
+		name: 'itachi'
 	},
 	{
 		url: JJK,
 		name: 'jjk'
 	},
+
 	{
-		url: JJK,
-		name: 'jjk'
-	},
-	{
-		url: sharigun,
-		name: 'sharigun.jpg'
+		url: inazuma,
+		name: 'inazuma'
 	},
 	{
 		url: itachi,
 		name: 'itachi'
 	},
 	{
-		url: itachi,
-		name: 'itachi'
+		url: sharigun,
+		name: 'sharigun.jpg'
 	},
-	{
-		url: inazuma,
-		name: 'inazuma'
-	},
-	{
-		url: inazuma,
-		name: 'inazuma'
-	},
+
 	{
 		url: dz,
 		name: 'dz'
 	},
 	{
+		url: inazuma,
+		name: 'inazuma'
+	},
+
+	{
+		url: onePiece,
+		name: 'onePiece'
+	},
+	{
 		url: dz,
 		name: 'dz'
-	},
-	{
-		url: onePiece,
-		name: 'onePiece'
-	},
-	{
-		url: onePiece,
-		name: 'onePiece'
 	}
 ];
