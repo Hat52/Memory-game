@@ -67,7 +67,7 @@ function App() {
 									? () => {}
 									: handleClick(index)
 							}
-							className={`flip-card 2xl:h-[250px] rounded-lg overflow-hidden cursor-pointer ${
+							className={`flip-card 2xl:h-[250px] cursor-pointer ${
 								currentFlips.some((flip: number) => flip === index) || d.matched
 									? 'rotate'
 									: ''

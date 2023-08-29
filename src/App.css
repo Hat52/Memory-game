@@ -14,10 +14,6 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-} */
-
 .rotate .flip-card-inner {
 	transform: rotateY(180deg);
 }
@@ -37,7 +33,7 @@
 }
 
 .flip-card-back {
-	/* background-image: url('./assets/Dog-With-Blue-Eyes.svg'); */
 	background-repeat: no-repeat;
 	transform: rotateY(180deg);
+	border: 1px solid #c8fbfa;
 }
