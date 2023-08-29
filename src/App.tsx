@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { gameData } from './constants/data';
 import { Sidebar } from './components';
+import ReactConfetti from 'react-confetti';
 
 function App() {
 	const [currentFlips, setCurrentFlips] = useState<number[]>([]);
@@ -46,6 +47,9 @@ function App() {
 
 	return (
 		<div>
+			{matches === 6 ? (
+				<ReactConfetti width={window.innerWidth} height={window.innerHeight} />
+			) : null}
 			<Sidebar guesses={guesses} matches={matches} handleReset={handleReset} />
 			<div className="md:px-60 px-5 py-10 relative">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
