@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { gameData } from './constants/data';
+import { Sidebar } from './components';
 
 function App() {
 	const [currentFlips, setCurrentFlips] = useState<number[]>([]);
@@ -45,19 +46,7 @@ function App() {
 
 	return (
 		<div>
-			<div className="sidebar absolute top-0 bottom-0 w-[10%] justify-center shadow-[#6DF6F2] bg-[#6DF6F260] shadow-lg flex flex-col">
-				<Item title="Guesses" value={guesses} />
-				<Item title="Matches" value={matches} />
-				<Item title="Percentage" value={`${Math.floor((100 * matches) / 6)}%`} />
-				{matches === 6 ? <Item title="You Won" /> : null}
-				{matches === 6 ? (
-					<button
-						onClick={handleReset}
-						className="bg-[#57D0C3] mx-5 p-2 text-white font-bold mt-10 rounded-md">
-						RESET
-					</button>
-				) : null}
-			</div>
+			<Sidebar guesses={guesses} matches={matches} handleReset={handleReset} />
 			<div className="md:px-60 px-5 py-10 relative">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 					{gameData.map((d: any, index: number) => (
@@ -85,19 +74,5 @@ function App() {
 		</div>
 	);
 }
-
-type TItem = {
-	title: string;
-	value?: string | number | boolean;
-};
-
-const Item = ({ title, value }: TItem) => {
-	return (
-		<div className="flex items-center my-5 flex-col gap-1">
-			<h3 className="font-bold uppercase text-[18px]">{title}</h3>
-			<p className="text-medium">{value}</p>
-		</div>
-	);
-};
 
 export default App;
