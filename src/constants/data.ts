@@ -1,4 +1,4 @@
-import scobyDoo from '../assets/scoobyDoo.svg';
+import sharigun from '../assets/sharigun.jpg';
 import JJK from '../assets/jjk.jpg';
 import itachi from '../assets/itachi.jpg';
 import inazuma from '../assets/inazuma.jpg';
@@ -14,8 +14,8 @@ type TGameData = {
 
 export const gameData: TGameData[] = [
 	{
-		url: scobyDoo,
-		name: 'scobby-do'
+		url: sharigun,
+		name: 'sharigun.jpg'
 	},
 	{
 		url: JJK,
@@ -26,8 +26,8 @@ export const gameData: TGameData[] = [
 		name: 'jjk'
 	},
 	{
-		url: scobyDoo,
-		name: 'scobby-do'
+		url: sharigun,
+		name: 'sharigun.jpg'
 	},
 	{
 		url: itachi,
